@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run Makefile
-        run: make -C ex00 re
+        run: make -C ex00 -e NAME=a.out re
 
       - name: 42valgrind Leak checker
         uses: solareenlo/42valgrind-action@v1.0.2
