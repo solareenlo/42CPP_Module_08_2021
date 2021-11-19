@@ -18,6 +18,6 @@ jobs:
         run: make -C ex00 re
 
       - name: 42valgrind Leak checker
-        uses: solareenlo/42valgrind-action@v1.0.1
+        uses: solareenlo/42valgrind-action@v1.0.2
         with:
           flags: 'ex00/a.out'
