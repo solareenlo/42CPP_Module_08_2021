@@ -1,4 +1,4 @@
-name: sanitizer
+name: Sanitizer
 
 on:
   push:
