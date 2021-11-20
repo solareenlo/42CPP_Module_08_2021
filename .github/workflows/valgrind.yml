@@ -14,10 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run Makefile
-        run: make -C ex00 -e NAME=a.out re
-
       - name: 42valgrind Leak checker
         uses: solareenlo/42valgrind-action@v1.0.3
         with:
-          flags: 'sh test_valgrind.sh'
+          flags: 'sh ./test/test_valgrind.sh'
