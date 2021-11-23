@@ -1,0 +1,18 @@
+name: Make on Linux
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  make_on_linux:
+    runs-on: ubuntu-latest
+
+    name: make_on_linux
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run make re on Linux
+        run: sh ./test/test_make_on_linux.sh

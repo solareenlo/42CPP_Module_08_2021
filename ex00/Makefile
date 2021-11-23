@@ -16,6 +16,7 @@ OBJ_DIR := obj
 SRCS    := $(addprefix $(SRC_DIR)/, $(SRC))
 OBJS    := $(addprefix $(OBJ_DIR)/, $(OBJ))
 HEADERS := $(shell find . -type f -name '*.hpp' -print)
+CPPLINT_FILTERS := #--filter=-runtime/references,-runtime/threadsafe_fn
 
 .PHONY:	all
 all: $(NAME)
@@ -31,23 +32,23 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 
 .PHONY: lint
 lint:
-	cpplint $(SRC) $(HEADERS)
+	cpplint $(CPPLINT_FILTERS) $(SRC) $(HEADERS)
 
 .PHONY: leak
 leak: CFLAGS += -g -fsanitize=leak
-leak: re
+leak: test
 
 .PHONY: address
 address: CFLAGS += -g -fsanitize=address
-address: re
+address: test
 
 .PHONY: thread
 thread: CFLAGS += -g -fsanitize=thread
-thread: re
+thread: test
 
 .PHONY: memory
 memory: CFLAGS += -g -fsanitize=memory
-memory: re
+memory: test
 
 .PHONY: clean
 clean:
