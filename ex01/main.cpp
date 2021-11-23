@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 07:16:25 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/24 07:35:33 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/24 08:30:56 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -45,6 +45,29 @@ void _test(int n) {
     }
 }
 
+void _testRange() {
+    try {
+        Span sp = Span(16);
+        std::vector<int> vec(10, 100);
+        sp.addNumbers(vec.begin(), vec.begin() + 5);
+        std::cout << "Sortest: " << sp.shortestSpan() << std::endl;
+        std::cout << "Longest: " << sp.longestSpan() << std::endl;
+
+        std::vector<const int> vec2(10, 200);
+        sp.addNumbers(vec2.begin(), vec2.end());
+        std::cout << "Sortest: " << sp.shortestSpan() << std::endl;
+        std::cout << "Longest: " << sp.longestSpan() << std::endl;
+
+        sp.addNumber(10);
+        std::cout << "Sortest: " << sp.shortestSpan() << std::endl;
+        std::cout << "Longest: " << sp.longestSpan() << std::endl;
+
+        sp.addNumber(10);
+    } catch (std::exception& e) {
+        std::cout << e.what() << std::endl;
+    }
+}
+
 int main() {
     std::srand(time(NULL));
 
@@ -62,5 +85,9 @@ int main() {
 
     std::cout << "< Test one >" << std::endl;
     _test(1);
+    std::cout << std::endl;
+
+    std::cout << "< Test range >" << std::endl;
+    _testRange();
     return 0;
 }
