@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 06:31:40 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/24 08:06:24 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/24 08:40:32 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -37,16 +37,6 @@ void Span::addNumber(int num) {
 void Span::addNumbers(std::vector<int>::iterator begin,
                       std::vector<int>::iterator end) {
     for (std::vector<int>::iterator itr = begin; itr != end; itr++) {
-        if (this->getSize() == this->getN()) {
-            throw Span::SpanIsNullException();
-        }
-        this->v_.push_back(*itr);
-    }
-}
-
-void Span::addNumbers(std::vector<int>::const_iterator begin,
-                      std::vector<int>::const_iterator end) {
-    for (std::vector<int>::const_iterator itr = begin; itr != end; itr++) {
         if (this->getSize() == this->getN()) {
             throw Span::SpanIsNullException();
         }

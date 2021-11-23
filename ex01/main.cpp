@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 07:16:25 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/24 08:30:56 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/24 08:39:31 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void _testRange() {
         std::cout << "Sortest: " << sp.shortestSpan() << std::endl;
         std::cout << "Longest: " << sp.longestSpan() << std::endl;
 
-        std::vector<const int> vec2(10, 200);
+        std::vector<int> vec2(10, 200);
         sp.addNumbers(vec2.begin(), vec2.end());
         std::cout << "Sortest: " << sp.shortestSpan() << std::endl;
         std::cout << "Longest: " << sp.longestSpan() << std::endl;
