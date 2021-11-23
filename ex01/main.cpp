@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 07:16:25 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/24 07:28:42 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/24 07:35:33 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -15,6 +15,17 @@
 #include <iostream>
 
 #include "span.hpp"
+
+void _test() {
+    Span sp = Span(5);
+    sp.addNumber(5);
+    sp.addNumber(3);
+    sp.addNumber(17);
+    sp.addNumber(9);
+    sp.addNumber(11);
+    std::cout << sp.shortestSpan() << std::endl;
+    std::cout << sp.longestSpan() << std::endl;
+}
 
 void _test(int n) {
     try {
@@ -38,7 +49,11 @@ int main() {
     std::srand(time(NULL));
 
     std::cout << "< Test normal >" << std::endl;
-    _test(10);
+    _test();
+    std::cout << std::endl;
+
+    std::cout << "< Test full >" << std::endl;
+    _test(20000);
     std::cout << std::endl;
 
     std::cout << "< Test null >" << std::endl;
