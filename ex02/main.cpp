@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 19:31:02 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/24 20:44:42 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/24 21:51:01 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ template <typename T>
 void outputMutantStack(MutantStack<T> mStack) {
     std::cout << "mStack: ";
     for (typename MutantStack<T>::iterator it = mStack.begin();
-         it != mStack.end(); it++) {
+         it != mStack.end(); ++it) {
         std::cout << *it << " ";
     }
     std::cout << std::endl;
