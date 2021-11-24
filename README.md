@@ -6,5 +6,8 @@
 [![Valgrind](https://github.com/solareenlo/42CPP_Module_08_2021/actions/workflows/valgrind.yml/badge.svg)](https://github.com/solareenlo/42CPP_Module_08_2021/actions/workflows/valgrind.yml)
 [![Make on Linux](https://github.com/solareenlo/42CPP_Module_08_2021/actions/workflows/make_on_linux.yml/badge.svg)](https://github.com/solareenlo/42CPP_Module_08_2021/actions/workflows/make_on_linux.yml)
 
+## ex01
+- [std::vector<const T>は使えないのか？](https://qiita.com/HO-RI9191/items/6f761af23cf5d288cb9e)
+
 ## ex00
 - [Containers library](https://en.cppreference.com/w/cpp/container)

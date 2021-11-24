@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 07:16:25 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/24 08:39:31 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/24 09:15:39 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -17,14 +17,20 @@
 #include "span.hpp"
 
 void _test() {
-    Span sp = Span(5);
-    sp.addNumber(5);
-    sp.addNumber(3);
-    sp.addNumber(17);
-    sp.addNumber(9);
-    sp.addNumber(11);
-    std::cout << sp.shortestSpan() << std::endl;
-    std::cout << sp.longestSpan() << std::endl;
+    try {
+        Span sp = Span(5);
+        const int i = 10;
+        sp.addNumber(i);
+        sp.addNumber(5);
+        sp.addNumber(3);
+        sp.addNumber(17);
+        sp.addNumber(9);
+        std::cout << sp.shortestSpan() << std::endl;
+        std::cout << sp.longestSpan() << std::endl;
+        sp.addNumber(11);
+    } catch (std::exception& e) {
+        std::cout << e.what() << std::endl;
+    }
 }
 
 void _test(int n) {
