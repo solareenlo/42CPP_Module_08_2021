@@ -8,8 +8,11 @@
 
 ## ex02
 - [library Containers](https://www.cplusplus.com/reference/stl/)
+
 - [std::stack cplusplus](https://www.cplusplus.com/reference/stack/stack/)
+
 - [std::stack cppreference](https://en.cppreference.com/w/cpp/container/stack)
+
   - stack はコンテナアダプタと言って，別に標準で実装されているコンテナを改良して作られるコンテナである
   - stack はデフォルトでは `deque` をもとに，`bakc()`, `push_back()`, `pop_back()`, `emplace_back()` が使えるようにされている．
   - stack が使用している元となるコンテナは `container_type` で定義されている
@@ -24,9 +27,12 @@
 
 ## ex01
 - [iteratorとconst_iteratorとconst interator](https://qiita.com/_EnumHack/items/a3724dead343b5aecb4e#iterator%E3%81%A8const_iterator%E3%81%A8const-interator)
+
 - [std::vector<const T>は使えないのか？](https://qiita.com/HO-RI9191/items/6f761af23cf5d288cb9e)
+
 - vector, sort, vector::begin, vector::front, vector::back
 
 ## ex00
 - [std::find cplusplus](https://www.cplusplus.com/reference/algorithm/find/)
+
 - [Containers library](https://en.cppreference.com/w/cpp/container)
