@@ -7,20 +7,20 @@
 [![Make on Linux](https://github.com/solareenlo/42CPP_Module_08_2021/actions/workflows/make_on_linux.yml/badge.svg)](https://github.com/solareenlo/42CPP_Module_08_2021/actions/workflows/make_on_linux.yml)
 
 ## ex02
-- stack はコンテナアダプタと言って，別に標準で実装されているコンテナを改良して作られるコンテナである
-- stack はデフォルトでは `deque` をもとに，`bakc()`, `push_back()`, `pop_back()`, `emplace_back()` が使えるようにされている．
-- stack が使用している元となるコンテナは `container_type` で定義されている
-- stack のソースコードを見てみると良い
-- mac の stack のソースコードでは
-```c++
-protected:
-container_type c;
-```
-と定義されているので，`std::stack::c.begin()` とか，`std::stack::c.end()` とすれば，stack の元となるコンテナの `begin()`, `end()` が使えて，先頭と最後にアクセスできる
-- ので，stack で iterator を無理やり使いたい場合は，元となるコンテナの iterator を使えば良い．
+- [library Containers](https://www.cplusplus.com/reference/stl/)
 - [std::stack cplusplus](https://www.cplusplus.com/reference/stack/stack/)
 - [std::stack cppreference](https://en.cppreference.com/w/cpp/container/stack)
-- [library Containers](https://www.cplusplus.com/reference/stl/)
+  - stack はコンテナアダプタと言って，別に標準で実装されているコンテナを改良して作られるコンテナである
+  - stack はデフォルトでは `deque` をもとに，`bakc()`, `push_back()`, `pop_back()`, `emplace_back()` が使えるようにされている．
+  - stack が使用している元となるコンテナは `container_type` で定義されている
+  - stack のソースコードを見てみると良い
+  - mac の stack のソースコードでは
+    ```c++
+    protected:
+    container_type c;
+    ```
+と定義されているので，`std::stack::c.begin()` とか，`std::stack::c.end()` とすれば，stack の元となるコンテナの `begin()`, `end()` が使えて，先頭と最後にアクセスできる
+  - ので，stack で iterator を無理やり使いたい場合は，元となるコンテナの iterator を使えば良い．
 
 ## ex01
 - [iteratorとconst_iteratorとconst interator](https://qiita.com/_EnumHack/items/a3724dead343b5aecb4e#iterator%E3%81%A8const_iterator%E3%81%A8const-interator)
