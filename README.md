@@ -23,10 +23,10 @@
   - ので，stack で iterator を無理やり使いたい場合は，元となるコンテナの iterator を使えば良い．
 
 ## ex01
-- [iteratorとconst_iteratorとconst interator](https://qiita.com/_EnumHack/items/a3724dead343b5aecb4e#iterator%E3%81%A8const_iterator%E3%81%A8const-interator)
-- [std::vector<const T>は使えないのか？](https://qiita.com/HO-RI9191/items/6f761af23cf5d288cb9e)
-- vector, sort, vector::begin, vector::front, vector::back
+  - [iteratorとconst_iteratorとconst interator](https://qiita.com/_EnumHack/items/a3724dead343b5aecb4e#iterator%E3%81%A8const_iterator%E3%81%A8const-interator)
+  - [std::vector<const T>は使えないのか？](https://qiita.com/HO-RI9191/items/6f761af23cf5d288cb9e)
+  - vector, sort, vector::begin, vector::front, vector::back
 
 ## ex00
-- [std::find cplusplus](https://www.cplusplus.com/reference/algorithm/find/)
-- [Containers library](https://en.cppreference.com/w/cpp/container)
+  - [std::find cplusplus](https://www.cplusplus.com/reference/algorithm/find/)
+  - [Containers library](https://en.cppreference.com/w/cpp/container)
