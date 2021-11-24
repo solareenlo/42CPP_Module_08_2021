@@ -21,6 +21,7 @@
     container_type c;
     ```
     と定義されているので，`std::stack::c.begin()` とか，`std::stack::c.end()` とすれば，stack の元となるコンテナの `begin()`, `end()` が使えて，先頭と最後にアクセスできる
+
   - ので，stack で iterator を無理やり使いたい場合は，元となるコンテナの iterator を使えば良い．
 
 ## ex01
