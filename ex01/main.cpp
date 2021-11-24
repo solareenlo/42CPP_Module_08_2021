@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 07:16:25 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/24 09:15:39 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/24 18:32:42 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -55,12 +55,14 @@ void _testRange() {
     try {
         Span sp = Span(16);
         std::vector<int> vec(10, 100);
-        sp.addNumbers(vec.begin(), vec.begin() + 5);
+        sp.addNumber(vec.begin(), vec.begin() + 5);
         std::cout << "Sortest: " << sp.shortestSpan() << std::endl;
         std::cout << "Longest: " << sp.longestSpan() << std::endl;
 
         std::vector<int> vec2(10, 200);
-        sp.addNumbers(vec2.begin(), vec2.end());
+        std::vector<int>::const_iterator start = vec2.begin();
+        std::vector<int>::const_iterator last = vec2.end();
+        sp.addNumber(start, last);
         std::cout << "Sortest: " << sp.shortestSpan() << std::endl;
         std::cout << "Longest: " << sp.longestSpan() << std::endl;
 
